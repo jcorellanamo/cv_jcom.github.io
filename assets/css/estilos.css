@@ -1,0 +1,84 @@
+body, html {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1, h2 {
+  font-family: 'Lucida Console', 'Courier New', monospace;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #222;
+}
+
+.header-section {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Ajusta esto según necesites */
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 20px;
+  padding-left: 50px; /* Ajusta el padding para posicionar el texto */
+}
+
+.text-box {
+  flex: 1; /* Permite que la caja de texto ocupe todo el espacio disponible excepto el de la imagen */
+  padding-right: 20px; /* Espaciado a la derecha para no tocar la imagen */
+}
+
+.image-box {
+  flex: 0 1 500px; /* La imagen no crecerá más allá de 300px y no se encogerá por debajo de este tamaño */
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  margin-left: 300px;
+  border-radius: 10px; /* Aplica bordes redondeados */
+}
+
+@media (max-width: 768px) {
+  .image-box {
+      display: none; /* Oculta la caja de la imagen en pantallas pequeñas */
+  }
+}
+
+.header-section .text-box {
+  max-width: 600px; /* Ajusta según necesites */
+}
+
+.header-section h1 {
+  font-size: 2.5em; /* Ajusta el tamaño del texto */
+  margin-bottom: 0;
+}
+
+.header-section h2 {
+  font-size: 2em; /* Ajusta el tamaño del texto */
+  margin-top: 0;
+}
+
+.card-img-top {
+  width: 100%;  /* Asegura que la imagen cubra el ancho completo de la tarjeta */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible sin distorsionarse */
+}
+
+.card-body{
+  background: #000;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
